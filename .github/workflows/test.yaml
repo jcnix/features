@@ -97,7 +97,7 @@ jobs:
           import fileinput
           import json
 
-          MAX_BIN_NUM=256
+          MAX_BIN_NUM=512
 
           def cycle_baskets(items: List[Any], maxbaskets: int) -> List[List[Any]]:
               baskets = [[] for _ in range(min(maxbaskets, len(items)))]
