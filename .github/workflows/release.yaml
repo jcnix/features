@@ -31,10 +31,20 @@ jobs:
 
       - name: "Publish Features"
         uses: devcontainers/action@v1
+        if: ${{ inputs.feature_name == '' }}
         with:
           publish-features: "true"
-          base-path-to-features: ${{ inputs.feature_name && format('./src/{}', inputs.feature_name) || './src' }}
+          base-path-to-features: "./src"
           generate-docs: "false"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: "Publish Specific Feature"
+        uses: devcontainers/action@v1
+        if: ${{ inputs.feature_name != '' }}
+        with:
+          publish-features: "false"
+          base-path-to-features: "./src/${{ inputs.feature_name }}"
+          generate-docs: "false"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
