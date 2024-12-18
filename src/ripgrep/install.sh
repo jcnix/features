@@ -15,7 +15,7 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-extra/features/gh-release:1.0.25" \
-    --option repo='BurntSushi/ripgrep' --option binaryNames='ripgrep' --option version="$VERSION"
+    --option repo='BurntSushi/ripgrep' --option binaryNames='rg' --option version="$VERSION"
 
 
 
