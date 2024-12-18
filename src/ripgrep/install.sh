@@ -14,7 +14,7 @@ ensure_nanolayer nanolayer_location "v0.5.7"
 $nanolayer_location \
     install \
     devcontainer-feature \
-    "ghcr.io/devcontainers-extra/features/gh-release:1.0.26" \
+    "ghcr.io/jcnix/features/gh-release:1.0.26" \
     --option repo='BurntSushi/ripgrep' --option binaryNames='rg' --option version="$VERSION"
 
 
